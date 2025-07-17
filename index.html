@@ -11,14 +11,21 @@
       color: white;
       text-align: center;
       padding: 18px;
-      background: #020000;
+      background: url('minecraft-background.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .overlay {
+        background: rgba(0,0,0,0.6);
+        padding: 20px;
+        border-radius: 10px; 
+        display: inline-block;
     }
     h1 {
         font-family: 'Press Start 2P', cursive;
         font-size: 26px;
         color:#ff1010;
     }
-   .color-inputs {
+    .color-inputs {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -43,6 +50,7 @@
   </style>
 </head>
 <body>
+    <div class="overlay">
   <h1>Parker's Color Mixer</h1>
   <p>Pick two colors and find out what color they make together!</p>
 
@@ -62,7 +70,7 @@
 
   <button id="mixBtn">Mix!</button>
   <button id="resetBtn">Reset</button>
-
+</div>
   <script>
     function hexToRgb(hex) {
       let r = parseInt(hex.slice(1, 3), 16);
